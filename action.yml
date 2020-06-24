@@ -1,0 +1,5 @@
+name: 'action-helm-cli'
+description: 'action-helm-cli'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'

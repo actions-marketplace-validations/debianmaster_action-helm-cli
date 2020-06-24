@@ -1,0 +1,16 @@
+on: [push]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    name: test
+    steps:
+    - uses: actions/checkout@v2
+    - uses: debianmaster/action-helm-cli@master
+      env:
+        SOURCE_DIR: 'charts'
+        CHART_FOLDER: 'test-chart'
+        FORCE: 'True'
+        CHARTMUSEUM_URL: 'https://charts.example.sh'
+        CHARTMUSEUM_USER: '${{ secrets.CHARTMUSEUM_USER }}'
+        CHARTMUSEUM_PASSWORD: ${{ secrets.CHARTMUSEUM_PASSWORD }}
