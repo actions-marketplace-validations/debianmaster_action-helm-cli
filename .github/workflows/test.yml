@@ -11,6 +11,6 @@ jobs:
         SOURCE_DIR: 'charts'
         CHART_FOLDER: 'test-chart'
         FORCE: 'True'
-        CHARTMUSEUM_URL: 'https://charts.example.sh'
+        CHARTMUSEUM_URL: 'https://charts.stg.cape.sh'
         CHARTMUSEUM_USER: '${{ secrets.CHARTMUSEUM_USER }}'
         CHARTMUSEUM_PASSWORD: ${{ secrets.CHARTMUSEUM_PASSWORD }}
